@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>The Mandlorian - Sezona 1</title>
+<title>The Mandlorian - Chapter I</title>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <link rel='icon' href='slike/A_logo.png' type='image/x-icon'/ >
-<meta name="description" content="Mandalorian -TV Show WEB Page - sezona 1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="description" content="Mandalorian -TV Show WEB Page - Mando">
 <meta name="keywords" content="mandalorian, star wars, disney">
 
 </head>
@@ -16,8 +17,7 @@ body{
 }
 nav{
 	width:100%;
-	background:black;
-}
+	background:black;}
 ul{
 	padding:0;
 	margin:10px 0 0 150px;
@@ -37,6 +37,7 @@ nav a{
 	display:block;
 	padding:20px 15px;
 	text-decoration:none;
+
 	color:#f2f2f2;
 	text-align:center;
 }
@@ -81,38 +82,28 @@ p.big {
   display:inline-block;
 }
 
+p.big2 {
+  line-height: 2;
+  font-size:medium;
+  margin-left:25%;
+  margin-right:25%;
+  text-align:justify;
+}
+
 
 p.big4 {
   line-height: 2;
   font-size:xx-large;
   margin-left: 15%;
   display:inline-block;
-  color:#CC9E6F;
 }
 p.big5 {
   line-height: 2;
   font-size:xx-large;
-  margin-left: 15%;
-  display:inline-block;
+  margin-left:10%;
+  text-align: left;
 }
 
-
-a{
-	color:white;
-}
-a:active{
-	color:#CC9E6F;
-}
-
-a:hover{
-	color:#CC9E6F;
-}
-
-
-
-p.big3:hover {
-  color:#CC9E6F;
-}
 
 
 
@@ -120,13 +111,16 @@ p.big3:hover {
 
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
+
 img {vertical-align: middle;}
+
 
 
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
 
 .dot:hover {
   background-color: #717171;
@@ -143,6 +137,7 @@ img {vertical-align: middle;}
 }
 
 @media only screen and (max-width: 300px) {
+
 }
 
 .footer {
@@ -156,20 +151,22 @@ img {vertical-align: middle;}
    text-align: center;
 }
 
-.container1 {
+
+.container3 {
   position: relative;
   display:inline-block;
-  width: 30%;
-  height:9%;
-  margin-left:15%;
-}
-.container2 {
-  position: relative;
-  display:inline-block;
-  width: 30%;
+  width: 20%;
   height:9%;
   margin-left:10%;
 }
+.container5 {
+  position: relative;
+  display:inline-block;
+  width: 20%;
+  height:9%;
+  margin-left:10%;
+}
+
 
 
 .image1 {
@@ -179,50 +176,100 @@ img {vertical-align: middle;}
 
 }
 
-.overlay1 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: black;
-  display:inline-block;
-}
-
-.container1:hover .overlay1 {
-  opacity: 0.8;
-  display:inline-block;
-}
-.container2:hover .overlay1 {
-  opacity: 0.8;
-  display:inline-block;
-}
-
-
-.text1 {
-  color: white;
-  font-size:xx-large;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  letter-spacing:4px;
-  display:inline-block;
-}
 a{
 	color:white;
 }
-a:hover{
+a:active{
 	color:#CC9E6F;
 }
 
+a:hover{
+	color:#CC9E6F;
+}
+a:link{
+	text-decoration:none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+	margin-left:21%;
+    float:left;
+    width: 15%;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+body {font-family: Roboto;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color:white;
+  background-color:black;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  
+}
+
+input[type=submit]:hover {
+  background-color: #CC9E6F;
+  color:white;
+}
+
+.container4 {
+  width: 70%;
+  background-color: black;
+  padding: 20px;
+  margin-left:15%;
+  color:white;
+}
 
 </style>
 
@@ -259,90 +306,74 @@ a:hover{
 
 <div> 
   <div>
-<img alt="naslovna" height="461" src="slike/season2.jpg" class="responsive"  style="top:10px">
+<img alt="naslovna" height="461" src="slike/s1e1.png" class="responsive" style="top:10px">
   </div>
 </div>
 <div class="a">
-	<p class="big" style="font-family: Roboto"><b>__________</b></p>
-	<a href="sezona1.html"><p class="big4" style="font-family: Roboto"><b> SEZONA 1   </b></p></a>
-	<a href="sezona2.html"><p class="big5" style="font-family: Roboto"><b>  SEZONA 2</b></p></a>
-	<p class="big5" style="font-family: Roboto"><b>__________</b></p>
+    <p class="big" style="font-family: Roboto"><b>__________</b></p>
+	<p class="big4" style="font-family: Roboto"><b> CHAPTER I: THE MANDALORIAN</b></p>
+	<p class="big4" style="font-family: Roboto"><b>__________</b></p>
 
 
 	<br>
+	<p class="big2" style="font-family: Roboto">Mando kreće na novu misiju kako bi novom misterioznom  klijentu donio traženi objekt za bogatu nagradu. Na tom putu, upoznaje nove suradnike, suočava se s novim prijetnjama i pronalazi novog, neočekivanog suputnika. </p>
+
+</div>
+<br><br>
+  <div class="rate" style="width: 34%">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  </div>
+<br><br>
+<div class="container4">
+  <form action="epizoda_1.html">
+	
+    <label for="fname">Ime</label>
+    <input type="text" id="fname" name="firstname" placeholder="Vaše ime...">
+
+    <label for="subject">Komentar</label>
+    <textarea id="subject" name="subject" placeholder="Ostavite komentar..." style="height:200px"></textarea>
+
+   <input type="submit" value="Pošalji">
+  </form>
 </div>
 
-<a href="epizoda_1.html">
-<div class="container1">
-  <img src="slike/sezona1/1_1.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto"><b>CHAPTER I: <br> THE MANDALORIAN</b></div>
-  </div>
-</div>
-</a>
-<a>
-<div class="container2">
-  <img src="slike/sezona1/1_2.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto"><b>CHAPTER II: <br> THE CHILD</b></div>
-  </div>
-</div>
-</a>
-<br><br><br><br><br>
-<a>
-<div class="container1">
-  <img src="slike/sezona1/1_3.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto" ><b>CHAPTER III: <br> THE SIN</b></div>
-  </div>
-</div>
-</a>
-<a>
-<div class="container2">
-  <img src="slike/sezona1/1_4.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto"><b>CHAPTER IV: <br> SANCTUARY</b></div>
-  </div>
-</div>
-</a>
-<br><br><br><br><br>
-<a>
-<div class="container1">
-  <img src="slike/sezona1/1_5.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto"><b>CHAPTER V: <br> THE GUNSLINGER</b></div>
-  </div>
-</div>
-</a>
-<a>
-<div class="container2">
-  <img src="slike/sezona1/1_6.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto"><b>CHAPTER VI: <br> THE PRISONER</b></div>
-  </div>
-</div>
-</a>
-<br><br><br><br><br>
-<a>
-<div class="container1">
-  <img src="slike/sezona1/1_7.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto" ><b>CHAPTER VII: <br> THE RECKONING</b></div>
-  </div>
-</div>
-</a>
-<a>
-<div class="container2">
-  <img src="slike/sezona1/1_8.png" alt="Avatar" class="image1">
-  <div class="overlay1">
-    <div class="text1" style="font-family:Roboto" ><b>CHAPTER VIII: <br> REDEMPTION</b></div>
-  </div>
-</div>
-</a>
 
+<br><br>
+<div class="a">
+	<br>
+	<p class="big5" style="font-family: Roboto; width: 30%;">
+	<b>SLIKE IZ EPIZODE </p>
+</div>
 
-
+<a>
+<div class="container3">
+  <img src="slike/likovi/dune.png" alt="Avatar" class="image1">
+</div>
+</a>
+<a>
+<div class="container5">
+  <img src="slike/likovi/grogu.png" alt="Avatar" class="image1">
+</div>
+</a>
+<a>
+<div class="container5">
+  <img src="slike/likovi/mando.jpg" alt="Avatar" class="image1">
+</div>
+</a>
 <br><br><br><br>
+
+
+
+<br><br>
 
 <h1>.</h1>
 <div class="footer" >
